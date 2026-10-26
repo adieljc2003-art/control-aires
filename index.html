@@ -3,7 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Control de Clientes · A/C</title>
+<title>Clientes A/C</title>
+<meta name="theme-color" content="#0E5A70">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Clientes A/C">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -468,6 +476,11 @@ function exportar(){
 render();
 if(window.claude&&window.claude.use){window.claude.use("downloads").then(function(d){downloadsCap=d;if(V.tab==="ajustes"&&!V.cliente)render();}).catch(function(){});}
 })();
+</script>
+<script>
+if("serviceWorker" in navigator && location.protocol==="https:" && !/claude\.ai|claudeusercontent/.test(location.hostname)){
+  window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});
+}
 </script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+{
+  "name": "Control de Clientes A/C",
+  "short_name": "Clientes A/C",
+  "description": "Control de clientes, equipos y mantenimientos de aires acondicionados",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F3F5F4",
+  "theme_color": "#0E5A70",
+  "icons": [
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
